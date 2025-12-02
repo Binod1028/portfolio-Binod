@@ -3,72 +3,92 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Binod Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header id="hero">
-    <h1>My Portfolio</h1>       
+    <video autoplay loop muted id="video-background">
+        <source src="video/3129977-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    </video>
+
     <nav class="navbar">
-        <a href="#about">About</a>
-        <a href="skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+        <span class="logo">My Portfolio</span>
+
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+            <button class="menu-toggle" id="menu-button" aria-expanded="false">☰</button>
+
     </nav>
-  <video autoplay loop muted id="video-background">
-        <source src="video\3129977-uhd_3840_2160_30fps.mp4" type="video/mp4">
-    </video> 
 
+    <div class="content">
+        <h1>Binod Chaudhary</h1>
+    </div>
 
+    <img src="images/Profile.png" class="profile" alt="Profile">
 </header>
 
 <main>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! My name is Binod Chaudhary. I am learning FullStack Development and this is my first portfolio website for this course.</p>
-        <img src="images/images1.png" alt="My Photo" class="profile">
+        <p class="intro">Hello, It's me</p>
+        <p class="name">Binod Chaudhary</p>
+        <p class="desc">
+            I am learning FullStack Development and this is my first portfolio website for this course.
+        </p>
     </section>
 
     <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <p>Java</p>
-        <p>Python</p>
-        <p>Web Development</p>
-    </div>
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <p>Java</p>
+            <p>Python</p>
+            <p>Web Development</p>
+        </div>
     </section>
 
     <section id="projects">
         <h2>My Projects</h2>
-        <ol class="project-grid">
-            <li><p>Weather App</p></li>
-            <li><p>To-do List</p></li>
-            <li><p>Banking System</p></li>
-            <li><p>Portfolio</p></li>
-        </ol>
+        <div id="projects-grid">
+            <div class="project-card">Weather App</div>
+            <div class="project-card">To-do List</div>
+            <div class="project-card">Banking System</div>
+            <div class="project-card">Portfolio Website</div>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
+
+        <form id="contact-form">
             <label>Name</label>
-            <input type="text" required>
+            <input type="text" id="form-name" required>
 
             <label>Email</label>
-            <input type="email" required>
+            <input type="email" id="form-email" required>
 
             <label>Message</label>
-            <textarea rows="4"></textarea>
+            <textarea id="form-message-input" rows="4"></textarea>
 
             <button type="submit">Send</button>
         </form>
+
+        <div id="form-message"></div>
     </section>
 </main>
 
 <footer>
     <p>&copy; 2025 Binod Chaudhary. All rights reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
